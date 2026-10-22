@@ -37,8 +37,10 @@ while true; do
         PWM_SPEED=190
     elif [ $TEMPERATURE -gt 50 ]; then
         PWM_SPEED=150
+    elif [ $TEMPERATURE -gt 40 ]; then
+        PWM_SPEED=110
     else 
-        PWM_SPEED=120
+        PWM_SPEED=80
     fi
     # sys_fan_3
     #/sys/class/hwmon/hwmon3/pwm3
